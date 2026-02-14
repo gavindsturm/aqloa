@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
+  }
+ 
+  body {
+    @apply bg-neutral-50 text-neutral-900 antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-neutral-900 hover:bg-neutral-800 text-white font-semibold px-6 py-3 rounded-md transition-all duration-200 shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-neutral-50 text-neutral-900 font-semibold px-6 py-3 rounded-md transition-all duration-200 border-2 border-neutral-300 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-ghost {
+    @apply hover:bg-neutral-100 text-neutral-700 font-medium px-4 py-2 rounded-md transition-all duration-200;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-md transition-all duration-200 shadow-sm;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-neutral-200 p-6 hover:shadow-md transition-shadow duration-200;
+  }
+  
+  .input {
+    @apply w-full px-4 py-2.5 border-2 border-neutral-300 rounded-md focus:ring-2 focus:ring-neutral-400 focus:border-transparent transition-all duration-200 bg-white text-neutral-900 disabled:bg-neutral-100 disabled:cursor-not-allowed;
+  }
+  
+  .stat-card {
+    @apply bg-white p-6 rounded-lg border border-neutral-200 hover:shadow-md transition-shadow duration-200;
+  }
+
+  .badge {
+    @apply px-3 py-1 rounded-full text-xs font-semibold;
+  }
+
+  .badge-new {
+    @apply bg-blue-100 text-blue-800;
+  }
+
+  .badge-contacted {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+
+  .badge-qualified {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .badge-closed {
+    @apply bg-neutral-800 text-white;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-500;
+}
+
+button, a, input, select, textarea {
+  @apply transition-all duration-200;
+}
